@@ -1,0 +1,53 @@
+import  random 
+i = ["rock","scissor","paper"]
+while True:
+    com_count= 0
+    my_count = 0
+    my_choice = input (f"enter the choice (yes/no)")
+    if my_choice == 'yes':
+        for a in range(1,6):
+            user_input = int(input(" 1 Rock\n 2 Scissor\n 3 Paper"))
+            if user_input == 1:
+                my_choice ="rock"
+            elif user_input == 2:
+                my_choice = "scissor"
+            elif user_input == 3:
+                my_choice = "paper"
+            com_choice = random.choice(i)
+            print(com_choice)
+            print(my_choice)
+            if com_choice == my_choice:
+                
+                print("computer value",com_choice)
+                print("user choice",my_choice)
+                print("game draw")
+                my_cout = my_count+1
+                com_count = com_count+1
+            elif (my_choice == "rock" and com_choice == "scissor") or ( my_choice == "paper" and com_choice == "rock") or (my_choice == "scissor" and com_choice == "paper"):
+                print("computer value",com_choice)
+                print("user choice",my_choice)
+                print("you win")
+                my_cout = my_count+1
+                
+            else:
+                print("computer value",com_choice)
+                print("user choice",my_choice)
+                print("computer win")
+                com_count = com_count+1
+        if my_count == com_count:
+            print("final game deaw")
+            print("user score",my_count)
+            print("computer score",com_count)
+        elif my_count > com_count:
+            print("final you win ")
+            print("user score",my_count)
+            print("computer score",com_count)
+        else :
+            print("final computer win ")
+            print("user score",my_count)
+            print("computer score",com_count)
+
+    else:
+        
+        break
+
