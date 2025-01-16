@@ -1,0 +1,18 @@
+
+print ("1.add\n2.subtract\n3.multiply\n3.divide")
+choice = int (input("enter a choise : "))
+a = int(input("enter a first number:"))
+b = int(input("enter a second number:"))
+
+if choice == 1:
+    print(a+b)
+elif choice == 2:
+    print (a-b) 
+elif choice == 3:
+    print(a*b)
+elif choice == 4:
+    if b == 0:
+        print ("denominator can be zero,try again!")
+    else:
+        print(a/b)
+   
